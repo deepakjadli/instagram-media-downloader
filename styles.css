@@ -1,0 +1,145 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: var(--header-bg,#363940);
+  color: var(--header-color, #fdebeb);
+  padding: 16px 32px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+.logo {
+  height: 100px;   /* Adjust as needed */
+  width: 100px;    /* Ensures it's not too large */
+  object-fit: contain;
+  margin-right: 16px;
+}
+
+.project-name {
+  font-size: 2rem;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+  font-weight: bold;
+  margin-right: auto; /* Pushes the toggle button to the right */
+}
+
+.toggle-mode {
+  background:#fcecec;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.container {
+  
+  background:linear-gradient(120deg,#8730c2,#fd1d1d,#fcb045);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #42484a;
+  text-align: center;
+}
+
+input, button {
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  border: none;
+}
+input {
+  width: 80%;
+}
+button {
+  background: #30a5f3;
+  color: #fff;
+  font-weight: bold;
+  transition: backgroud-color 0.24s,color 0.24s;
+}
+button:hover {
+  background: #f8eeee;
+  color:#30a5f3;
+}
+#result {
+  margin-top: 1rem;
+  
+} 
+#downl {
+  background-color: #fff;
+  color:#9b56c9;
+
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#instagramInput:hover{
+  border-color: linear-gradient(120deg,#c2306f,#fd1dfd,#bf45fc);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #363940;
+  color: #ffe2e2;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  margin: 0;
+  padding-top: 64px; /* Prevent content from hiding under fixed header */
+}
+
+body.light-mode {
+  background: #efe7e7;
+  color: #363940;
+}
+
+body.light-mode .header {
+  background:#efe7e7;
+  color: #363940;
+}
+
+body.light-mode .toggle-mode {
+  background: #363940;
+  color: #efe7e7;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 95vw;
+    min-width: unset;
+    max-width: 98vw;
+    height: auto;
+    padding: 10px;
+  }
+  .header {
+    padding: 10px 8px;
+  }
+  .logo {
+    height: 40px;
+    width: 40px;
+    margin-right: 8px;
+  }
+  .project-name {
+    font-size: 1.2rem;
+  }
+  input[type="text"], button {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+}
+
